@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "Archivo", sans-serif;
     font-optical-sizing: auto;
     letter-spacing: .5px;
@@ -6,7 +6,7 @@ body{
     color: #020202;
 }
 
-h1{
+h1 {
     font-size: 20px;
     text-transform: uppercase;
 }
@@ -20,24 +20,32 @@ h1{
 .img-product {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    object-fit: cover;
+    object-fit: fill;
     width: 100%;
 }
 
 .item {
-    position: relative;
+
     border: 1px solid rgb(0, 0, 0, 0.1);
     border-radius: 16px;
 }
 
-.item>.category {
+.photo {
+    position: relative;
+}
+
+.category {
     background-color: rgb(8, 102, 255, 0.8);
     border-start-end-radius: 16px;
     padding: 4px 8px;
     font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-.item>.category_2 {
+
+.category_2 {
     background-color: rgb(0, 181, 33, 0.8);
 }
 
