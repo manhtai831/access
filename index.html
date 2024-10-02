@@ -19,6 +19,28 @@
 </head>
 
 <body>
+    <script>
+        function on(url) {
+            const image = document.getElementById('image-overlay')
+            image.src = url
+            document.getElementById("overlay").style.display = "block";
+        }
+
+        function off() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+
+    <div id="overlay">
+        <div class="d-flex justify-content-center align-content-center align-items-center h-100 w-100">
+            <img id="image-overlay" style="object-fit: contain;max-height: 80%; max-width: 80%;" alt="">
+            <div style="top: 0; right: 0;position: absolute; color: white; cursor: pointer; padding: 16px;"
+                onclick="off()">
+                Đóng
+            </div>
+        </div>
+    </div>
+
     <div class="main-content">
         <div class="container">
 
@@ -35,13 +57,18 @@
                 <div class="d-flex flex-column align-items-center justify-content-center col-xl-8">
                     <h1>Giới thiệu về chúng tôi</h1>
                     <p style="margin-top: 16px;font-size: 16px;">
-                        Công ty Cổ phần Phân phối Thực phẩm Truy xuất Nguồn gốc An Phát, với gần 5 năm phát triển, là đơn vị tiên phong cung cấp thủy hải sản an toàn, chất lượng cao. Chúng tôi phục vụ các bếp ăn trường học và bếp ăn công nghiệp tại Hà Nội cùng nhiều tỉnh miền Bắc.
-<br>
-<br>
-Sản phẩm chính bao gồm thủy hải sản đông lạnh như cá basa (fillet, nguyên con, cắt khúc), tôm thịt hấp và các loại tươi sống như cá rô phi, cá diêu hồng, tất cả đều đạt tiêu chuẩn VSATTP và có tem truy xuất nguồn gốc.
-<br>
-<br>
-An Phát cam kết hợp tác với các nhà máy uy tín trên toàn quốc, đảm bảo tuân thủ nghiêm ngặt các quy định vệ sinh an toàn thực phẩm của Bộ Y tế.
+                        Công ty Cổ phần Phân phối Thực phẩm Truy xuất Nguồn gốc An Phát, với gần 5 năm phát triển, là
+                        đơn vị tiên phong cung cấp thủy hải sản an toàn, chất lượng cao. Chúng tôi phục vụ các bếp ăn
+                        trường học và bếp ăn công nghiệp tại Hà Nội cùng nhiều tỉnh miền Bắc.
+                        <br>
+                        <br>
+                        Sản phẩm chính bao gồm thủy hải sản đông lạnh như cá basa (fillet, nguyên con, cắt khúc), tôm
+                        thịt hấp và các loại tươi sống như cá rô phi, cá diêu hồng, tất cả đều đạt tiêu chuẩn VSATTP và
+                        có tem truy xuất nguồn gốc.
+                        <br>
+                        <br>
+                        An Phát cam kết hợp tác với các nhà máy uy tín trên toàn quốc, đảm bảo tuân thủ nghiêm ngặt các
+                        quy định vệ sinh an toàn thực phẩm của Bộ Y tế.
                     </p>
 
                     <h1 style="margin-top: 16px;" style="margin-top: 48px;">Một số hình ảnh</h1>
@@ -50,29 +77,33 @@ An Phát cam kết hợp tác với các nhà máy uy tín trên toàn quốc, �
 
                     <div class="row gy-4">
                         <div class="col-12 col-md-6" style="padding-right: 12px;">
-                            <img src="./assets/1.png" class="w-100 img-demo" alt="">
-                            <img src="./assets/2.png" style="margin-top: 24px;" class="w-100 img-demo" alt="">
+                            <img src="./assets/1.png" onclick='on("./assets/1.png")' class="w-100 img-demo" alt="">
+                            <img src="./assets/2.png" onclick='on("./assets/2.png")' style="margin-top: 24px;"
+                                class="w-100 img-demo" alt="">
                         </div>
                         <div class="col-12 col-md-6" style="padding-left: 12px;">
-                            <img src="./assets/3.png" class="w-100 img-demo" alt="">
+                            <img src="./assets/3.png" onclick='on("./assets/3.png")' class="w-100 img-demo" alt="">
                         </div>
                     </div>
                     <div class="row gy-4" style="margin-top: 0px;">
                         <div class="col-12 col-md-6" style="padding-right: 12px;">
-                            <img src="./assets/4.png" class="w-100 img-demo" alt="">
+                            <img src="./assets/4.png" onclick='on("./assets/4.png")' class="w-100 img-demo" alt="">
                         </div>
                         <div class="col-12 col-md-6" style="padding-left: 12px;">
-                            <img src="./assets/5.png" class="w-100 img-demo" alt="">
-                            <img src="./assets/6.png" style="margin-top: 24px;" class="w-100 img-demo" alt="">
+                            <img src="./assets/5.png" onclick='on("./assets/5.png")' class="w-100 img-demo" alt="">
+                            <img src="./assets/6.png" onclick='on("./assets/6.png")' style="margin-top: 24px;"
+                                class="w-100 img-demo" alt="">
                         </div>
 
                     </div>
                     <div class="row gy-4 " style="margin-top: 0px;">
                         <div class="col-12 col-md-6">
-                            <img src="./assets/cert/1.png" class="w-100 img-demo" alt="">
+                            <img src="./assets/cert/1.png" onclick='on("./assets/cert/1.png")' class="w-100 img-demo"
+                                alt="">
                         </div>
                         <div class="col-12 col-md-6">
-                            <img src="./assets/cert/2.png" class="w-100 img-demo" alt="">
+                            <img src="./assets/cert/2.png" onclick='on("./assets/cert/2.png")' class="w-100 img-demo"
+                                alt="">
                         </div>
 
                     </div>
